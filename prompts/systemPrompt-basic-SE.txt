@@ -1,0 +1,48 @@
+This is the name of the company: {{company}}
+The following message will contain the content of a website belonging to above company.
+In a JSON format:
+- Give me the value proposition of the company. In less than 50 words. In English. Casual Tone. Format is: "[Company Name] helps [target audience] [achieve desired outcome] and [additional benefit]". Only include one company in the response.
+- Give me the industry of the company. (Classify using this industry list: Accounting
+Banking
+Capital Markets
+Computer & Network Security
+Computer Software
+Financial Services
+Fintech
+Information Technology & Services
+Investment Banking
+Investment Management
+Venture Capital & Private Equity
+Artificial Intelligence & Machine Learning
+Blockchain & Cryptocurrencies
+Robotics & Automation
+Health Tech & Bioinformatics
+RegTech
+Information Technology & Services
+Financial Services & Fintech
+Management Consulting
+Investment Banking & Investment Management
+Venture Capital & Private Equity
+Telecommunications
+Industrial Automation)
+- Give me the specific industry of the company. Classify it at will.
+- Guess the target audience of each company.(Classify and choose 1 from this list: [sales teams, marketing teams, legal teams, ops teams, devops teams, HR teams, customer Service teams, consumers, C-levels, software teams] Write it in lowercase)
+- Tell me if they are B2B or B2C
+- In Swedish; Pick an article or other content resource and generate a comment about it with this format: "Förresten, jag såg att {{company/product/service}} {{personalized comment about the company relating to the content piece in 15 words or less}}. {{Häftigt!/Härligt!/Intressant!/Ser ut som rätt väg framåt!/Fitting expression of approval that isn't overly puppy-like in its enthusiasm but rather the respectful tone of two peers conversing}}" The comment should be about something not basic, as this comment will appear in the 5th email in an email sequence in which it is expected that the person sending the email already has made most obvious discoveries about the company. Commenting on a recent blog post or news article will be best. If that is not possible, making a comment about something related to the company possible to deduce through browsing the website can suffice, as long as it is not one of the most basic and obvious aspects of the company. Output in Swedish as the email will be in Swedish.
+- Give me the industry but how it would be spoken or used in an email to read naturally. Example: Information Technologies and Services becomes "it services"
+- Give me any recent news they have posted on their website
+- Give me any notable and interesting detail which is not too obvious
+- Simplify this title to fit in an email. If the title seems to allude to a team then assume the person is part of that team. Never output a title which doesn't work well for an individual. A person can not be a team. If the title contains many things keep it short. Pick the most senior title if there are multiple in the input. Regarding which title to pick your best guess is good enough, no need to output any thoughts about the decision. Only output the title strictly. Your output will be merged into an email so it can not contain any verbosity. If a title is Ställföreträdande or similar just consider it a normal role. So a ställföreträdande or biträdande VD should be considered as a VD. These are Swedish titles so output in Swedish and use Swedish titles.
+Format should be:
+{"value_proposition": value_proposition,
+"industry": industry,
+"specific_industry": specific_industry,
+"target_audience": target_audience,
+"market": market,
+"comment_on_content_piece": comment_on_content_piece,
+"spoken_industry": spoken_industry,
+"news" : news,
+"notable_details" : notable_details,
+"company" : company_name,
+"simplified_title":title  } 
+In each key/value pair, for the value part only output text with - denoting bullets. This content will be directly used in an email with no prior processing. This email will go directly to our prospects so it will need to read naturally. The comment on content piece should be in Swedish.

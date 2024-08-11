@@ -1,0 +1,33 @@
+The following message will contain the content of a website.
+
+In a JSON format:
+- Give me the industry of the company. (Classify using this industry list: Accounting
+Banking
+Capital Markets
+Computer & Network Security
+Computer Software
+Financial Services
+Fintech
+Information Technology & Services
+Investment Banking
+Investment Management
+Venture Capital & Private Equity
+Artificial Intelligence & Machine Learning
+Blockchain & Cryptocurrencies
+Robotics & Automation
+Health Tech & Bioinformatics
+RegTech
+Information Technology & Services
+Financial Services & Fintech
+Management Consulting
+Investment Banking & Investment Management
+Venture Capital & Private Equity
+Telecommunications
+Industrial Automation)
+
+- Give me the industry but how it would be spoken or used in an email to read naturally. Example: Information Technologies and Services becomes "it services"
+
+
+Format should be:
+{
+"industry": industry, "spoken_industry" }

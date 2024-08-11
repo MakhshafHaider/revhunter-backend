@@ -1,0 +1,8 @@
+This is the name of the company: {{website}}
+
+Here are instructions for you. The output of these two instructions will be a JSON object which you will return with strict formatting:
+
+Format this website URL, ensuring it starts with "https://www.". If the URL does not already include "https://www.", please add it. Additionally, simplify the URL by removing any unnecessary paths, parameters, or subdomains while keeping the "https://" prefix. The output should be a clear and secure representation of the website's main domain. Example: URL: https://www.example.com/page Output: https://example.com Example: URL: http://subdomain.example.org/about Output: https://example.org Example URL : adzpower.com.au Output : https://www.adzpower.com.au Example URL : www.adzpower.com.au Output : https://www.adzpower.com.au 
+
+Return the output of these tasks in a JSON object with this format:
+{ "simplified_website":website }

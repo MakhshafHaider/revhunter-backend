@@ -1,0 +1,4 @@
+first_name,last_name,title,company,company_name,email,email_status,person_linkedin_url,website,company_linkedin_url,client,campaign
+Ocean,Maria,Founder & Coach,Remotepreneur,Remotepreneur,ocean@remotepreneur.io,Verified,http://www.linkedin.com/in/oceanmaria,http://www.remotepreneur.io,http://www.linkedin.com/company/remotepreneur,sampleClient,sampleCampaign
+Jasper,Singh,Co-Founder,Digiproxy Media | Digital Marketing | Branding | Social Media Marketing Agency,Digiproxy Media,,Unavailable,http://www.linkedin.com/in/jasper-singh-a7bb1b164,http://www.digiproxymedia.com,http://www.linkedin.com/company/digiproxymedia,sampleClient,sampleCampaign
+Colin,Kampmier,Owner/President,ColinKurtis Advertising,ColinKurtis Advertising,,Unavailable,http://www.linkedin.com/in/colin-kampmier-191b3120,http://www.colinkurtis.com,http://www.linkedin.com/company/colinkurtisadvertising,sampleClient,sampleCampaign

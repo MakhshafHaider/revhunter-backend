@@ -1,0 +1,86 @@
+This is the name of the company: {{company}}
+
+The following message will contain the content of a website belonging to above company.
+
+In a JSON format:
+
+- Give me the value proposition of the company. In less than 50 words. In English. Casual Tone. Format is: "[Company Name] helps [target audience] [achieve desired outcome] and [additional benefit]". Only include one company in the response.
+
+- Give me the industry of the company. (Classify using this industry list: Accounting
+Banking
+Capital Markets
+Computer & Network Security
+Computer Software
+Financial Services
+Fintech
+Information Technology & Services
+Investment Banking
+Investment Management
+Venture Capital & Private Equity
+Artificial Intelligence & Machine Learning
+Blockchain & Cryptocurrencies
+Robotics & Automation
+Health Tech & Bioinformatics
+RegTech
+Information Technology & Services
+Financial Services & Fintech
+Management Consulting
+Investment Banking & Investment Management
+Venture Capital & Private Equity
+Telecommunications
+Industrial Automation)
+- Give me the specific industry of the company. Classify it at will.
+- Guess the target audience of each company.(Classify and choose 1 from this list: [sales teams, marketing teams, legal teams, ops teams, devops teams, HR teams, customer Service teams, consumers, C-levels, software teams] Write it in lowercase)
+- Tell me if they are B2B or B2C
+- Pick an article or other content resource and generate a comment about it with this format: "Btw, I saw that {{company/product/service}} {{personalized comment about the company relating to the content piece in 15 words or less}}. {{Cool!/Incredible/Interesting/Looks like the right way forward/Fitting expression of approval that isn't overly puppy-like in its enthusiasm but rather the respectful tone of two peers conversing}}" The comment should be about something not basic, as this comment will appear in the 5th email in an email sequence in which it is expected that the person sending the email already has made most obvious discoveries about the company. Commenting on a recent blog post or news article will be best. If that is not possible, making a comment about something related to the company possible to deduce through browsing the website can suffice, as long as it is not one of the most basic and obvious aspects of the company.
+- Using the input, create three bullet points of creative outbound marketing ideas for a company. The ideas have to be possible with cold email marketing. Analyze who their target audience would be by value proposition and think of creative ways to market to their clients. Be specific and give unique, advanced, senior marketing advice. Keep each bullet under 15 words and use strategies that use outbound marketing. For all suggestions make sure you assume it will be done in bulk, targeting a large volume of prospects. 
+- Give me the industry but how it would be spoken or used in an email to read naturally. Example: Information Technologies and Services becomes "it services"
+- Give me any recent news they have posted on their website
+- Give me any notable and interesting detail which is not too obvious
+
+Clean the title up and make it fit for a cold outbound email. 
+Be professional but not formal. Do not be informal. 
+Where common practice prefer acronyms, so if the title is Chief Executive Officer then output CEO. But 
+"Head of Digital" stays Head of Digital.
+Risk Management Officer becomes Risk Management Officer since it is not common to say RMO.
+Only output the title strictly. 
+Your output will be merged into an email so it can not contain any verbosity or unneccesary parts.
+No need to output what's after a big title like VP. So VP - Cloud and Reliability Engineering just becomes VP
+A Chief Executive is not a Chief Executive Officer. So remains Chief Executive.
+If Chief is in the name, retain it, as it is an important distinction with titles. So Chief Marketing and Product Officer becomes CMPO.
+Example: Title: CFO Team Output: CFO 
+Example: Title: Chief Executive Officer (CEO) Output: CEO 
+Example: Title: Ekonomichef / CFO Output: CFO 
+Example: Title: CFO & co-founder Output: co-founder 
+Example: Title: Head of Digital & Operations/Marketing Output: Head of Digital
+Example: Title: Group Executive Business Banking Output: Business Banking leader
+
+Make this company name fit for using in an email. 
+So it needs to read like someone would write it by hand. 
+Only output the name, do not offer any explanation or verbosity. 
+Your response will be used directly in an email, with no prior 
+processing so it needs to be just the name. 
+Provide your best guess. 
+Example: Company LLC becomes Company. Most of the time the name
+would just become one word. The input might contain more than just one name. 
+Just pick the one which seems the most likely to be the main company name. 
+Use the website address as a clue as to how the company presents itself.
+With banks it's common to refer to them with their acronyms, but not always. 
+Look at the website address to get a clue as to how they refer to themselves.
+
+Format should be:
+{"value_proposition": value_proposition,
+"industry": industry,
+"specific_industry": specific_industry,
+"target_audience": target_audience, 
+"market": market, 
+"comment_on_content_piece": comment_on_content_piece,
+"spoken_industry": spoken_industry,
+"news" : news,
+"notable_details" : notable_details,
+"company" : company_name,
+"simplified_title":title, 
+"simplified_name": name 
+ }
+
+In each key/value pair, for the value part only output text with - denoting bullets. This content will be directly used in an email with no prior processing. This email will go directly to our prospects so it will need to read naturally. 

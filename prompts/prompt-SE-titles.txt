@@ -1,0 +1,13 @@
+Here are two instructions for you. The output of these two instructions will be a JSON object which you will return with strict formatting:
+
+1. Translate to a Swedish title. If the title seems to allude to a team then assume the person is part of that team. Never output a title which doesn't work well for an individual. A person can not be a team. If the title contains many things keep it short. Always output one word only and always in lowercase except when outputting an acronym. Pick the most senior title if there are multiple in the input. The output should only be one word. Respect this fully. Regarding which title to pick your best guess is good enough, no need to output any thoughts about the decision. Only output the title strictly. Your output will be merged into an email so it can not contain any fluff. If a title is Acting or similar just consider it a normal role. So an Acting CEO should be considered as a CEO. Example: Title: CFO team Output: ekonomichef Example: Title: Chief Executive Officer (CEO) Output: VD Example: Title: Ekonomichef / CFO Output: ekonomichef Example: Title: CFO & co-founder Output: medgrundare 
+2. Make this company name fit for using in an email. So it needs to read like someone would write it by hand. Only output the name, do not offer any explanation or verbosity. Your response will be used directly in an email, with no prior processing so it needs to be just the name. Provide your best guess. Example: Company LLC becomes Company. Most of the time the name would just become one word. The input might contain more than just one name. Just pick the one which seems the most likely to be the main company name. Use the website address as a clue as to how the company presents itself
+3. Use capital letters for acronym titles like VD, CEO, CFO etc
+4. Make sure the title makes sense. "People Partner" just remains "People Partner" as it doesn't make sense to make it simpler since we then lose the meaning of the title.
+This is the sentence it needs to fit with: "Som {{simplified_title}} hos {{simplified_name}}, har du...."
+
+Return the output of these two tasks in a JSON object with this format:
+{ "simplified_title":title, "simplified_name": name }
+
+This is the input title: {input_title}
+This is the input company name: {input_company_name}

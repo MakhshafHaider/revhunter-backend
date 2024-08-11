@@ -1,0 +1,40 @@
+Here are two instructions for you. The output of these two instructions will be a JSON object which you will return with strict formatting:
+
+1. Clean the title up and make it fit for a cold outbound email. 
+Be professional but not formal. Do not be informal. 
+Where common practice prefer acronyms, so if the title is Chief Executive Officer then output CEO. But 
+"Head of Digital" stays Head of Digital.
+Risk Management Officer becomes Risk Management Officer since it is not common to say RMO.
+Only output the title strictly. 
+Your output will be merged into an email so it can not contain any verbosity or unneccesary parts.
+No need to output what's after a big title like VP. So VP - Cloud and Reliability Engineering just becomes VP
+A Chief Executive is not a Chief Executive Officer. So remains Chief Executive.
+If Chief is in the name, retain it, as it is an important distinction with titles. So Chief Marketing and Product Officer becomes CMPO.
+Example: Title: CFO Team Output: CFO 
+Example: Title: Chief Executive Officer (CEO) Output: CEO 
+Example: Title: Ekonomichef / CFO Output: CFO 
+Example: Title: CFO & co-founder Output: co-founder 
+Example: Title: Head of Digital & Operations/Marketing Output: Head of Digital
+Example: Title: Group Executive Business Banking Output: Business Banking leader
+
+2. Make this company name fit for using in an email. 
+So it needs to read like someone would write it by hand. 
+Only output the name, do not offer any explanation or verbosity. 
+Your response will be used directly in an email, with no prior 
+processing so it needs to be just the name. 
+Provide your best guess. 
+Example: Company LLC becomes Company. Most of the time the name
+would just become one word. The input might contain more than just one name. 
+Just pick the one which seems the most likely to be the main company name. 
+Use the website address as a clue as to how the company presents itself.
+With banks it's common to refer to them with their acronyms, but not always. 
+Look at the website address to get a clue as to how they refer to themselves.
+
+Return the output of these two tasks in a JSON object with this format:
+{ "simplified_title":title, "simplified_name": name }
+
+This is the input title: {input_title}
+This is the input company name: {input_company_name}
+This is the input for the website: {input_website}
+
+Always write in English. If the input title is empty, just assume the title is Founder.

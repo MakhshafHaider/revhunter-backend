@@ -1,0 +1,18 @@
+The following message will contain the content of a website.
+
+In a JSON format:
+- Give me the type of bank if this is a bank
+- Give me their focus as a bank (full service, credit union, fintech, lending etc)
+- Give me any recent news they have posted on their website
+- Give me any notable and interesting detail which is not too obvious
+- Give me the industry but how it would be spoken or used in an email to read naturally. Example: Information Technologies and Services becomes "it services"
+- Give me a summary in one paragraph about the bank, it's vision, any goals or specific focus areas or any mission
+
+Format should be:
+{
+"industry": industry, "spoken_industry",
+"type_of_bank" : type of bank,
+"news" : news,
+"notable_details" : notable details,
+"focus" : focus,
+"summary" : summary }

@@ -1,0 +1,75 @@
+plan.txt
+
+1. Streamline uploading leads to db
+ - enforce snake_case ✅
+ - take a csv file and upload records ✅
+ - manage thousands of leads at once ✅
+ - download csv from collection ✅
+ - download csv from specific filter ✅
+
+2. Set up enricher which checks for the empty columns and runs enrichments to address those columns 
+ - isolated api function to call openai with completed prompt ✅
+ - enrich single record based on prompt ✅
+ - scrape website for content ✅
+ - enrich every record based on condition ✅
+ - run process for enrichment and check in intervals
+ - only enrich records which haven't been enriched 
+ - add progress indication ✅
+ - add batching
+ - add parallell processing ✅
+
+3. Create UI for uploader
+ - Get Vue working ✅
+ - Base layout ✅
+ - upload csv for enrichment ✅
+    - create client/campaign if not exist ✅
+    - upsert in db ✅
+  - upload file and send to BE ✅
+  - trigger enrichment for campaign ✅
+ - download csv based on pre-made filter ✅
+ - See records and remaining to enrich for client 
+
+ 4. Use Budibase as UI
+  - Deploy simplified service in render.com 
+    - should expose API to trigger an enrichment run 
+
+
+4. Schedule cron for enriching unenriched collections
+
+5. Deploy as online service
+6. Deploy as website
+
+Stories:
+I need to be able to upload a csv and tie it to a client and a campaign
+This batch should auto-enrich after being uploaded, and I should be able to see progress.
+
+Test:
+Add new client ✅
+Check that new  client exist in db ✅
+
+Add new campaign on client ✅
+Check that new campaign exists on client ✅
+Check that campaign name renders in combobox ✅
+
+Check that contacts have been rendered with right 
+client and campaign ✅
+
+I should be able to see all campaigns 
+and the enrichment data thereof ✅
+
+I should be able to trigger enrichment 
+on a specific campaign 
+
+I should be able to see clear signals on errors
+and successful db inserts
+
+I should be able to see which enrichment prompt has 
+finished on each row
+
+I should be able to trigger specific enrichments
+on campaigns
+
+
+Backlog:
+ - User management
+ - Automated test coverage

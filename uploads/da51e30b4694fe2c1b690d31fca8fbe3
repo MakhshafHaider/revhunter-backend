@@ -1,0 +1,10 @@
+time_series_id,api_request_count_consumed_api_align_rate_reduce_sum_resource_type_consumed_api_metric_type_serviceruntime_googleapis_com_api_request_count_resource_labels_credential_id_serviceaccount_109480604214448303090_project_id_facebook_leads_400307_service_sheets_googleapis_com
+service,sheets.googleapis.com
+project_id,facebook-leads-400307
+Wed Sep 27 2023 15:55:00 GMT+0500 (Pakistan Standard Time),0.009222209259043207
+Wed Sep 27 2023 16:00:00 GMT+0500 (Pakistan Standard Time),0.0007777907409567939
+Wed Sep 27 2023 16:10:00 GMT+0500 (Pakistan Standard Time),0.00255554259237654
+Wed Sep 27 2023 16:15:00 GMT+0500 (Pakistan Standard Time),0.012777768518364197
+Wed Sep 27 2023 16:20:00 GMT+0500 (Pakistan Standard Time),0.004666688889259266
+Wed Sep 27 2023 16:25:00 GMT+0500 (Pakistan Standard Time),0.013333333333333334
+Wed Sep 27 2023 16:40:00 GMT+0500 (Pakistan Standard Time),0.0033333333333333335
